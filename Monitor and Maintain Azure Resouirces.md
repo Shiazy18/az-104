@@ -26,3 +26,9 @@ Alert rule can send:
 `NSG flow logs` provides a record of traffic through network security groups (NSGs) but does not validate outbound connectivity.
 
 `Traffic Analytics` analyzes traffic patterns and usage but does not validate specific outbound connections.
+
+Azure Monitor data collection rules (`DCRs`) can only collect data from specific resources, primarily virtual machines, as data sources.
+
+The valid destinations for a Data Collection Rule (DCR) in Azure Monitor include Log Analytics workspaces, Azure Table storage, Azure Blob storage, Azure Monitor metrics, and Event Hubs. 
+
+Azure Backup requires a Recovery Services vault to store backup data for virtual machines.

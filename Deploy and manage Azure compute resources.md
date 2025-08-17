@@ -10,3 +10,8 @@ To ensure that you can push and pull signed container images in ContReg1, you ne
 
 `Service Tags` simplify network security group (NSG) rules by allowing you to reference a group of IP addresses associated with a specific Azure service.
 
+App Service and Azure Container Instances both support Windows-based containers,
+Azure App Service, Azure Container Apps, and Azure Container Instances all support Linux-based containers supports Linux-based containers
+
+`ACR Tasks` are supported in all service tiers: `Basic, Standard, and Premium`. While there are performance and feature differences across the tiers (such as the number of concurrent tasks or webhook triggers), ACR Tasks functionality is available in all three tiers, including Basic.
+- Premium tier of Azure Container Registry supports private endpoints. 

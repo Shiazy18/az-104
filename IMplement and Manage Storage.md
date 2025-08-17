@@ -1,4 +1,4 @@
-## Implement and manage storage
+# Implement and manage storage
 
 Azure Storage accounts support a maximum of 5 stored access policies per container.
 Azure Storage accounts support a maximum of 2 immutable blob storage policies per container.
@@ -30,7 +30,13 @@ WebJobs are used to run background tasks in Azure App Service,
 
 only storage accounts configured with `LRS` (Locally Redundant Storage), `GRS` (Geo-Redundant Storage), or `RA-GRS` (Read-Access Geo-Redundant Storage) support moving blob data to the Archive access tier.
 
+ Azure Blob Storage is configured using `immutability` policies (such as time-based retention or legal hold), which are set at the container level.
+
 `stored access policies` are used in conjunction with Shared Access Signatures (SAS) to manage shared access over time, but they cannot enforce access based on blob index tags.
+
+
+- `Azure Storage` accounts allow a maximum of `five` `stored access policies` per container.
+- In Azure Blob Storage, you can create up to `two immutable blob stored access policies per container`. 
 
 The `Cool tier` has a minimum retention `period of 30 days`, meaning that if a blob is deleted, overwritten, or moved to another tier before 30 days, an early deletion penalty applies.
 
@@ -41,3 +47,17 @@ The `Archive tier` has a minimum retention period of 180 days.
  frequency you can choose while configuring backup for blob storage can be either daily or weekly.
 
  Azure Backup supports taking snapshots of Azure File Shares up to six times per day, ie, every 4 hours
+
+ the frequency you can choose while configuring `backup` for blob storage can be either daily or weekly.
+
+`Global Admins` do not have permissions to assign custom security attributes to Entra objects.
+
+`custom security` attributes cannot be assigned to Microsoft 365 groups.
+
+`Encryption scopes` in Azure are designed to apply to Blob storage, specifically to containers and individual blobs within a storage account.
+
+Azure Backup requires that the storage account used for diagnostic settings (like Azure Backup reports) be in the same region as the Recovery Services vault (Vault1).
+
+The location of the `Log Analytics workspace` does not need to match the location of the Recovery Services vault.
+
+Availability zones provide resilience within a region, but they do not protect against a full regional outage.
