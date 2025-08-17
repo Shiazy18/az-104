@@ -15,3 +15,23 @@ To create a `staging slot `for an Azure App Service plan, it must be in the Stan
 
 
 port 53, which is used by the DNS service.
+
+`Service tags` represent a group of IP address prefixes for specific Azure services and are automatically maintained by Microsoft, which minimizes administrative effort and adheres to the principle of least privilege. By using the AzureKeyVault service tag, you allow access only to Key Vault endpoints and nothing else on the internet, satisfying both security and operational requirements.
+
+`Public IP addresses` can be associated with a load balancer or a network interface to enable external communication with resources like virtual machines or services behind the load balancer.
+
+By using service chaining and configuring user-defined routes (UDRs), you can route traffic from the on-premises network, through the VPN gateway on VNet1, to VNet2. This setup leverages the existing peering between VNet1 and VNet2 without requiring additional costly infrastructure like Azure Firewall or ExpressRoute, thereby minimizing costs. UDRs will ensure that the traffic is directed through the correct paths.'
+
+`internal load balancer` in Azure is designed to distribute network traffic within a virtual network (VNet) across virtual machines (VMs) without exposing them to the internet whereas `public load balancer` is used to distribute traffic from the internet to VMs within a VNet.
+
+`network interface` allows a VM to connect to a subnet but does not affect the IP range available within the virtual network.
+
+`network interfaces (NICs)` must be created in the same region as the virtual network (VNet) they are associated with.
+
+`Azure Bastion` requires a Standard Public IP address for both the Basic and Standard SKUs. Additionally, the IP address must be IPv4, have a Regional tier, and use a Static assignment.
+
+`Azure Bastion` requires subnet prefix of at least /26 to function properly. 
+
+`Proximity placement groups` are specific to a region and must be within a single resource group. Furthermore, each proximity placement group is associated with only one Azure Resource Group.
+
+To create a staging slot for an Azure App Service plan, it must be in the Standard, Premium, or higher pricing tier.
