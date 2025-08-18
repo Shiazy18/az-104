@@ -28,6 +28,8 @@ WebJobs are used to run background tasks in Azure App Service,
 
 `Lifecycle management policies` are supported for block blobs and append blobs in general-purpose v2, premium block blob, and Blob Storage accounts.
 
+AzCopy supports copying data to Blob storage and File storage,
+
 only storage accounts configured with `LRS` (Locally Redundant Storage), `GRS` (Geo-Redundant Storage), or `RA-GRS` (Read-Access Geo-Redundant Storage) support moving blob data to the Archive access tier.
 
  Azure Blob Storage is configured using `immutability` policies (such as time-based retention or legal hold), which are set at the container level.
