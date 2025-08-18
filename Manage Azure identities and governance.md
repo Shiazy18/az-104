@@ -26,3 +26,5 @@ the regular SSPR policy does not apply to users in administrative roles, such as
 
 Nnesting is supported for groups that can be assigned a role.
  Azure role assignments do not support nested groups when the nested group is a Microsoft 365 group.
+
+`Co-administrator `role can only be assigned at the subscription level. This role grants the same access as the built-in Owner role but does not allow modifying role assignments within the subscription.
