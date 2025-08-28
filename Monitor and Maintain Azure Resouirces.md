@@ -4,7 +4,7 @@
 
 `Azure Monitor Network Insights`  gives you a high-level view of the health and topology of your network resources
 
-`Azure Virtual Network Manager` because it's used for centralized network management and policy enforcement across VNets, not for diagnosing connectivity issues like blocked ports.
+`Azure Virtual Network Manager` is used for centralized network management and policy enforcement across VNets, not for diagnosing connectivity issues like blocked ports.
 
 when a `peering connection is in a Disconnected state`, you must `delete the existing peering` first in order to modify the address space.
 
@@ -26,6 +26,8 @@ Alert rule can send:
 `NSG flow logs` provides a record of traffic through network security groups (NSGs) but does not validate outbound connectivity.
 
 `Traffic Analytics` analyzes traffic patterns and usage but does not validate specific outbound connections.
+
+`Packet Capture` captures live packet data for network traffic but does not identify which security rule is affecting the traffic.
 
 Azure Monitor data collection rules (`DCRs`) can only collect data from specific resources, primarily virtual machines, as data sources.
 

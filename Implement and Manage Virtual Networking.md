@@ -35,3 +35,7 @@ By using service chaining and configuring user-defined routes (UDRs), you can ro
 `Proximity placement groups` are specific to a region and must be within a single resource group. Furthermore, each proximity placement group is associated with only one Azure Resource Group.
 
 To create a staging slot for an Azure App Service plan, it must be in the Standard, Premium, or higher pricing tier.
+
+`Azure Firewall` requires Standard SKU public IP addresses.
+
+`Azure Firewall` only supports Static IPv4 public IP addresses.
